@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+john:
+  Name: Doe
+  Vorname: John
+  Email: john@doe.com
+  TelefonNummer: +414199999999
+  Klassierung: 
+  Klassierungswert: 
+  partner_team_cup: 
+  draw_men_singles: true
+  draw_team_cup: false
+  draw_men_doubles: false
+  partner_men_doubles: 
+  tournament_id: 1
+
+two:
+  Name: MyString
+  Vorname: MyString
+  Email: MyString
+  TelefonNummer: MyString
+  Klassierung: MyString
+  Klassierungswert: 1.5
+  partner_team_cup: MyString
+  draw_men_singles: false
+  draw_team_cup: false
+  draw_men_doubles: MyString
+  partner_men_doubles: MyString
+  tournament_id: 1

@@ -1,0 +1,65 @@
+<%= form_for(@registration) do |f| %>
+  <% if @registration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@registration.errors.count, "error") %> prohibited this registration from being saved:</h2>
+
+      <ul>
+      <% @registration.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Name %><br />
+    <%= f.text_field :Name %>
+  </div>
+  <div class="field">
+    <%= f.label :Vorname %><br />
+    <%= f.text_field :Vorname %>
+  </div>
+  <div class="field">
+    <%= f.label :Email %><br />
+    <%= f.text_field :Email %>
+  </div>
+  <div class="field">
+    <%= f.label :TelefonNummer %><br />
+    <%= f.text_field :TelefonNummer %>
+  </div>
+  <div class="field">
+    <%= f.label :Klassierung %><br />
+    <%= f.text_field :Klassierung %>
+  </div>
+  <div class="field">
+    <%= f.label :Klassierungswert %><br />
+    <%= f.text_field :Klassierungswert %>
+  </div>
+  <div class="field">
+    <%= f.label :partner_team_cup %><br />
+    <%= f.text_field :partner_team_cup %>
+  </div>
+  <div class="field">
+    <%= f.label :draw_men_singles %><br />
+    <%= f.check_box :draw_men_singles %>
+  </div>
+  <div class="field">
+    <%= f.label :draw_team_cup %><br />
+    <%= f.check_box :draw_team_cup %>
+  </div>
+  <div class="field">
+    <%= f.label :draw_men_doubles %><br />
+    <%= f.text_field :draw_men_doubles %>
+  </div>
+  <div class="field">
+    <%= f.label :partner_men_doubles %><br />
+    <%= f.text_field :partner_men_doubles %>
+  </div>
+  <div class="field">
+    <%= f.label :tournament_id %><br />
+    <%= f.number_field :tournament_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

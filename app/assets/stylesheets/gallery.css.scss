@@ -1,0 +1,35 @@
+.album_body table {
+    margin:0pt;padding:0pt;border-collapse:collapse;
+}
+
+.album_imagebox {
+    text-align:center;display:table-row;
+}
+
+.alb_albums {
+    text-align: center;
+}
+
+.alb_album {
+    float:left;
+    width:194px;
+    height:230px;
+}
+
+.album_frame {
+    background:transparent url(../images/album_background.gif) no-repeat scroll left center;
+    height:194px;
+    text-align:center;
+    width:194px;
+}
+
+.album_padding {
+    padding-top:16px;
+}
+
+.album_titlebox {
+    margin-top:0.2em;
+    text-align: center; 
+    font-size:12px;
+    overlfow:hidden;
+}

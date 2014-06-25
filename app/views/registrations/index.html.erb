@@ -1,0 +1,44 @@
+<h1>Listing registrations</h1>
+
+<table class="table table-striped">
+    <thead>
+  <tr>
+    <th>Name</th>
+    <th>Vorname</th>
+    <th>Email</th>
+    <th>Telefonnummer</th>
+    <th>Klassierung</th>
+    <th>Klassierungswert</th>
+    <th>Partner team cup</th>
+    <th>Draw men singles</th>
+    <th>Draw team cup</th>
+    <th>Draw men doubles</th>
+    <th>Partner men doubles</th>
+    <th>Tournament</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+</thead>
+<% @registrations.each do |registration| %>
+  <tr>
+    <td><%= registration.Name %></td>
+    <td><%= registration.Vorname %></td>
+    <td><%= registration.Email %></td>
+    <td><%= registration.TelefonNummer %></td>
+    <td><%= registration.Klassierung %></td>
+    <td><%= registration.Klassierungswert %></td>
+    <td><%= registration.partner_team_cup %></td>
+    <td><%= registration.draw_men_singles %></td>
+    <td><%= registration.draw_team_cup %></td>
+    <td><%= registration.draw_men_doubles %></td>
+    <td><%= registration.partner_men_doubles %></td>
+    <td><%= registration.tournament_id %></td>
+    <td><%= link_to 'Show', registration %></td>
+    <td><%= link_to 'Edit', edit_registration_path(registration) %></td>
+    <td><%= link_to 'Destroy', registration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

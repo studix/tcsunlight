@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+</head>
+<body>
+	<h1>Hallo <%=@registration.Vorname%></h1>
+	<p>
+		Vielen Dank für deine Anmeldung zu den Clubmeisterschaften. Du hast dich für folgende Konkurrenzen angemeldet:
+	</p>
+	<ul>
+		<%  for draw in @registration.registered_draws %>
+		<li><%=draw%></li>
+		<%  end %>
+	</ul>
+	<p>
+		Du erhältst kein Aufgebot. Spielpläne und Spielzeiten sind ab <%=@registration.tournament.spielplan_verfuegbar_datum.strftime('%d.%m.%Y')%> im Clubhhaus aufgehängt und im Internet abrufbar.
+	</p>
+	<p>Bis bald!</p>
+	<p>Die Turnierleitung</p>
+</body>
+</html>

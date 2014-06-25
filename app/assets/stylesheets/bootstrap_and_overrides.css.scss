@@ -1,0 +1,91 @@
+$navbarInverseBackground: #252525;
+@import "bootstrap";
+body { 
+   padding-top: 60px; 
+}
+
+p {
+    color: #434950;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+.hero-unit {
+  height:250px;
+  color: #FFFFFF;
+  background-image: url("../images/front.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% top;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  text-align: left;
+  padding:40px;
+  text-shadow: 0 1px 2px #000000;
+}
+
+
+/* Sticky footer styles 
+-------------------------------------------------- */
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+  height: 60px;
+}
+#footer {
+    background-color: #232323;
+    background-image: linear-gradient(to bottom, #222222, #252525);
+    background-repeat: repeat-x;
+    border-color: #252525;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+#footer ul {
+    list-style: none outside none;
+    margin: 0 0px 10px 0px;
+    padding-top: 5px;
+}
+#footer ul a {
+    color: #999999;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+#footer ul a:hover {
+    background-color: transparent;
+    color: white;
+    text-decoration:none;
+}
+
+#footer li:first-child {
+    color: #FF9900;
+    font-size: 12px;
+    font-weight: normal;
+    padding-bottom: 3px;
+    text-transform: uppercase;
+}
+
+@import "bootstrap-responsive";	

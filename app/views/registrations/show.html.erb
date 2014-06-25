@@ -1,0 +1,46 @@
+<p>
+  <b>Name:</b>
+  <%= @registration.Name %>
+</p>
+
+<p>
+  <b>Vorname:</b>
+  <%= @registration.Vorname %>
+</p>
+
+<p>
+  <b>E-Mail:</b>
+  <%= @registration.Email %>
+</p>
+
+<p>
+  <b>Telefonnummer:</b>
+  <%= @registration.TelefonNummer %>
+</p>
+<%if @registration.Klassierung? %>
+<p>
+  <b>Klassierung:</b>
+  <%= @registration.Klassierung %>
+</p>
+<% end %>
+
+<%if @registration.Klassierungswert? %>
+<p>
+  <b>Klassierungswert:</b>
+  <%= @registration.Klassierungswert %>
+</p>
+<% end %>
+
+<p>
+  <b>Bemerkung:</b>
+  <%= @registration.comment %>
+</p>
+
+<p><b>Angemeldet für:</b></p>
+  <ul>
+    <%  for draw in @registration.registered_draws %>
+    <li><%=draw%></li>
+    <%  end %>
+  </ul>
+
+<%= link_to 'Home', :controller => 'pages', :action => 'index' %>

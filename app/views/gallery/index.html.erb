@@ -1,0 +1,26 @@
+    <div class="album_body">
+      <table width="100%">
+        <tbody/>
+        <tr>
+          <td>
+            <div class="alb_albums">
+              <% for album in @albums -%>   
+                <div class="alb_album">
+                  <div class="album_imagebox">
+                    <div class="album_frame">
+                      <div class="album_padding">
+                        <a href="<%=album.link_url%>" target="_blank"><img width="160" height="160" src="<%= album.thumbnail %>"/></a>
+                      </div>
+                    </div>
+                  </div>
+                    <div class="album_titlebox">
+                      <a href="<%=album.link_url%>" target="_blank"><%= h(album.title) %></a>
+                      <span>(<%=album.num_photos%>)</span>
+                    </div>
+                </div>
+              <% end %>
+            </div>
+        </td></tr>
+      </table>
+    </div>
+

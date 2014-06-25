@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @tournament.title %>
+</p>
+<p>
+  <b>Spielplan verfügbar ab:</b>
+  <%= @tournament.spielplan_verfuegbar_datum %>
+</p>
+
+
+<%= link_to 'Edit', edit_tournament_path(@tournament) %> |
+<%= link_to 'Back', tournaments_path %>

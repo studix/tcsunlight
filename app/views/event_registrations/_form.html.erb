@@ -1,0 +1,33 @@
+<%= form_for(@event_registration) do |f| %>
+  <% if @event_registration.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event_registration.errors.count, "error") %> prohibited this event_registration from being saved:</h2>
+
+      <ul>
+      <% @event_registration.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Email %><br />
+    <%= f.text_field :Email %>
+  </div>
+  <div class="field">
+    <%= f.label :Name %><br />
+    <%= f.text_field :Name %>
+  </div>
+  <div class="field">
+    <%= f.label :Vorname %><br />
+    <%= f.text_field :Vorname %>
+  </div>
+  <div class="field">
+    <%= f.label :event_name %><br />
+    <%= f.text_field :event_name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

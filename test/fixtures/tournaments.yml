@@ -1,0 +1,8 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: Clubmeisterschaften 2013
+  spielplan_verfuegbar_datum: 2013-08-25
+
+two:
+  title: MyString

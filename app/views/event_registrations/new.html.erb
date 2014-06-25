@@ -1,0 +1,45 @@
+<div class="row">
+		<h2>Anmeldung <%= @event_registration.event.title %></h2>
+		<p>Ich bin Mitglied des TC Sunlight Olten und möchte mich für den <a href="/assets/hopp_schwiiz_2014_aushang.png" target="_new"><%= @event_registration.event.title %></a> vom <%= @event_registration.event.date.strftime('%d.%m.%Y') %> anmelden.</p>
+
+		<%= form_for @event_registration, :html => {:class => "form-horizontal"} do %>
+			<% if @event_registration.errors.any? %>
+						    <div class="alert alert-error fade in">
+			      <a class="close" data-dismiss="alert" href="#">&times;</a>
+			      Eingabe ist unvollständig.
+			    </div>
+			<% end %>
+		<div class="control-group">
+			<%= hidden_field_tag 'event_id', @event_registration.event_id %> 
+			<label for="event_registration_first_name" class="control-label">Vorname</label>
+			<div class="controls">
+				<%= text_field(:event_registration, :Vorname) %>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<label for="event_registration_name" class="control-label">Name</label>
+			<div class="controls">
+				<%= text_field(:event_registration, :Name) %>
+			</div>
+		</div>
+
+		<div class="control-group">
+			<label for="event_registration_email" class="control-label">E-Mail</label>
+			<div class="controls">
+				<%= text_field(:event_registration, :Email) %>
+			</div>
+		</div>
+		<div class="control-group">
+			<label for="event_registration_num_persons" class="control-label">Anzahl Personen</label>
+			<div class="controls">
+				<%= text_field(:event_registration, :num_persons) %>
+			</div>
+		</div>
+<div class="form-actions">
+			<%= submit_tag "Anmelden", :disabled => true, :class => "btn btn-large btn-primary"  %>
+		</div>
+		<% end %>
+
+		<%= link_to 'Zurück', :controller => 'pages', :action => 'index' %>
+</div>

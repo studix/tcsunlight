@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "TC Sunlight Olten" %></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <%= yield(:head) %>
+</head>
+<body>
+  <div id="wrap">
+   <div class="navbar navbar-inverse navbar-fixed-top">
+     <div class="navbar-inner">
+      <div class="container">
+        <%= render 'layouts/navigation' %>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <%= render 'layouts/messages' %>
+    <%= yield %>
+  </div>
+    <div id="push"></div>
+  </div>
+  <div id="footer">
+    <div class="muted credit">
+      <div class="container">
+        <div class="row-fluid">
+          <div class="span3">
+            <ul>
+              <li>TC Sunlight Olten</li>
+              <li>Sportstrasse 111, 4600 Olten</li>
+            </ul>
+          </div>
+          <div class="span3">
+           <ul >
+            <li>ÜBER UNS</li>
+            <li><%= link_to "Impressum", :controller => "pages", :action => "impressum"%></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</body>
+</html>
