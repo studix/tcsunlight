@@ -20,5 +20,5 @@ production:
   encoding: utf8
   database: studer_sunlight
   username: studer_root
-  password: <%= begin IO.read("/home/studer/deploy/.tcsunlight_db") rescue "" end %>
+  password: bunny1
   socket: /tmp/mysql.sock
