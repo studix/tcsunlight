@@ -30,3 +30,5 @@ credentials/tcsunlight_app.rb
 config/tcsunlight.sublime-project
 
 config/tcsunlight.sublime-workspace
+
+credentials/.tcsunlight_db
