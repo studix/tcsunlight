@@ -24,3 +24,5 @@ config/secrets.yml
 .rvmrc
 
 app/views/pages/index.html.erb~
+
+SunlightWeb.sublime-workspace
