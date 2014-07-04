@@ -1,21 +1,17 @@
 SunlightWeb::Application.routes.draw do
   resources :events
-
-
   resources :event_registrations
-
-
+  resources :registrations
+  resources :tournaments
   resources :users
+  resources :sessions
 
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
-  resources :registrations
-  resources :tournaments
-  resources :users
-  resources :sessions
+
 
   get "gallery/index"
 

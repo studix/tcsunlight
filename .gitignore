@@ -27,8 +27,8 @@ app/views/pages/index.html.erb~
 
 credentials/tcsunlight_app.rb
 
-config/tcsunlight.sublime-project
-
-config/tcsunlight.sublime-workspace
-
 credentials/.tcsunlight_db
+
+tcsunlight.sublime-project
+
+tcsunlight.sublime-workspace

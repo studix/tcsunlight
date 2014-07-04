@@ -1,0 +1,24 @@
+<h1>Change password</h1>  
+  
+<%= form_for @user do |f| %>  
+  <% if @user.errors.any? %>
+        <% @user.errors.full_messages.each do |msg| %>
+                <div class="alert alert-error fade in">
+            <a class="close" data-dismiss="alert" href="#">&times;</a>
+            <%= msg %>
+          </div>
+        <% end %>
+      <% end %>
+
+  <div class="field">  
+    <%= f.label :password, 'New password' %>  
+    <%= f.password_field :password %>  
+  </div>  
+  <div class="field">  
+    <%= f.label :password_confirmation %>  
+    <%= f.password_field :password_confirmation %>  
+
+  </div>  
+  <%= f.hidden_field :email %>  
+  <div class="actions"><%= f.submit 'Change password'%></div>  
+<% end %>  

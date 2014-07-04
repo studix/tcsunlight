@@ -1,4 +1,0 @@
-Aus Kommandozeile: cap deploy
-Vorbedingung: svn.exe muss lokal installiert sein.
-
-Wichtig: Deploy-Script kopiert das File /home/studer/sunlight/public/dispatch.cgi in das Deployment-Zielverzeichnis. Falls Fehlermeldung "Rails application failed to start" erscheint, dieses File manuell kopieren.
