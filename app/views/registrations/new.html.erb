@@ -61,6 +61,13 @@
 		</div>
 
 		<div class="control-group">
+			<label for="registration_men_seniors" class="control-label">Einzel Senioren</label>
+			<div class="controls">
+				<%= check_box 'registration', 'draw_men_seniors'  %>
+			</div>
+		</div>
+
+		<div class="control-group">
 			<label for="registration_men_doubles" class="control-label">Herren Doppel</label>
 			<div class="controls">
 				<%= check_box 'registration', 'draw_men_doubles'  %>
@@ -89,7 +96,7 @@
 <div class="control-group">
 			<label for="registration_bemerkung" class="control-label">Bemerkung</label>
 			<div class="controls">
-				<%= text_field(:registration, :comment) %>
+				<%= text_area(:registration, :comment, :size=>"100") %>
 			</div>
 		</div>
 		<div class="form-actions">

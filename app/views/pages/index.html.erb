@@ -9,23 +9,22 @@
 </div>
 <hr>
 <div class="row-fluid marketing">
-  <div class="span5">
-    <h4>Oltner Tennismeisterschaften im Gheid</h4>
- <p>Die Oltner-Meisterschaften werden vom 3. - 12. Juli 2015 auf den Plätzen im Gheid durchgeführt. Wenn alle Plätze im Gheid durch diese Veranstaltung besetzt sind, sind für die Mitglieder des TC Sunlight im Schöngrund permanent zwei Plätze reserviert. 
-    <a href="http://www.tcolten.ch/oltner/oltner.html" target="_new">Zu den Turnier-Details.</a>
-  </p>
-    <h4>Mittsommernachts-Fest abgesagt</h4>
-    <p>Das für den 20. Juni 2015 geplante Mittsomernachts-Fest ist abgesagt. Grund dafür sind Schwierigkeiten in der Planung und die Nähe zum Todestag von Hans-Peter Imfeld.</p>
-   <h4>Interclub 2015 Saisonende</h4>
-  <p>Die Interclubsaison 2015 ist bereits wieder vorbei. Unsere 3 Mannschaften haben mit unterschiedlichem Erfolg die Saison bestritten. Die Herrenmannschaft 35+ ist nach nur einer Saison in der 3. Liga bereits wieder in die 2. Liga aufgestiegen. Die 1. Liga Herren 45+ haben den Ligaerhalt geschafft, die 2. Liga Herren 45+ steigen jedoch in die 3. Liga ab. <br><a href="https://comp.swisstennis.ch/ic/servlet/ClubResult?ClubName=2203&Lang=D&device=" target="_new">Zur Resultatübersicht.</a>
-</p>
-
+    <div class="span5">
+       <h4>Clubmeisterschaften vom 24. - 30. August 2015</h4>
+   <p>Die Clubmeisterschaften des TC Sunlight finden vom Montag 24. bis Sonntag 30. August 2015 statt. Es sind 4 Konkurrenzen ausgeschrieben.
+      <br><%= link_to "Zur Turnierausschreibung.", :action => 'clubmeisterschaften2015'%><br>
+      <%= link_to 'Zur Anmeldung.', :controller => 'registrations', :action => 'new', :tournament_id => '3' %>
+    </p>
+      <h4>Oltner Tennismeisterschaften im Gheid</h4>
+   <p>Die Oltner-Meisterschaften werden vom 3. - 12. Juli 2015 auf den Plätzen im Gheid durchgeführt. Wenn alle Plätze im Gheid durch diese Veranstaltung besetzt sind, sind für die Mitglieder des TC Sunlight im Schöngrund permanent zwei Plätze reserviert. 
+      <a href="http://www.tcolten.ch/oltner/oltner.html" target="_new">Zu den Turnier-Details.</a>
+    </p>
  </div>
 
-  <div class="span6">
- <h4>Hans-Peter Imfeld ist verstorben</h4>
-  <p>Unser Ehrenmitglied und ehemaliger Präsident Hans-Peter Imfeld ist am 24. Mai 2015 nach schwerer Krankheit verstorben. Hans-Peter war mehr als 22 Jahre Präsident unseres Tennisclubs und zuvor bereits viele Jahre Vorstandsmitglied. Sein Mitwirken zum Wohle unseres Tennisclubs hat Bleibendes hinterlassen. Der Vorstand ist ihm dafür dankbar und wird ihn als Kollegen und vor allem als Menschen vermissen.
-</p>
+ <div class="span5">
+  <h4>Interclub 2015 Saisonende</h4>
+    <p>Die Interclubsaison 2015 ist bereits wieder vorbei. Unsere 3 Mannschaften haben mit unterschiedlichem Erfolg die Saison bestritten. Die Herrenmannschaft 35+ ist nach nur einer Saison in der 3. Liga bereits wieder in die 2. Liga aufgestiegen. Die 1. Liga Herren 45+ haben den Ligaerhalt geschafft, die 2. Liga Herren 45+ steigen jedoch in die 3. Liga ab. <br><a href="https://comp.swisstennis.ch/ic/servlet/ClubResult?ClubName=2203&Lang=D&device=" target="_new">Zur Resultatübersicht.</a>
+  </p>
   <h4>360° Panoramatour</h4>
   <p>Der TC Sunlight verfügt über eine der schönsten Tennisanlagen der Region. <%= link_to 'Erkunde die Anlage', :action => 'gheid'%>.
   </p>
@@ -33,6 +32,7 @@
   <h4>Lust auf Tennis?</h4>
   <p><%= link_to 'Werde Mitglied.', :action => 'mitglied'%></p>
 </div>
+
 </div>
   <h4>Platzreservationen</h4>
   <table class="table table-striped">

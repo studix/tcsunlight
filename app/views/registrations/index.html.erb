@@ -9,11 +9,13 @@
     <th>Telefonnummer</th>
     <th>Klassierung</th>
     <th>Klassierungswert</th>
-    <th>Partner team cup</th>
-    <th>Draw men singles</th>
-    <th>Draw team cup</th>
-    <th>Draw men doubles</th>
-    <th>Partner men doubles</th>
+    <th>Herren Einzel</th>
+    <th>Einzel Senioren</th>
+    <th>Herren Doppel</th>
+    <th>Partner HE Doppel</th>
+    <th>Team-Cup</th>
+    <th>Partner Team-Cup</th>
+    <th>Bemerkung</th>
     <th>Tournament</th>
     <th></th>
     <th></th>
@@ -28,11 +30,13 @@
     <td><%= registration.TelefonNummer %></td>
     <td><%= registration.Klassierung %></td>
     <td><%= registration.Klassierungswert %></td>
-    <td><%= registration.partner_team_cup %></td>
     <td><%= registration.draw_men_singles %></td>
-    <td><%= registration.draw_team_cup %></td>
+    <td><%= registration.draw_men_seniors %></td>
     <td><%= registration.draw_men_doubles %></td>
     <td><%= registration.partner_men_doubles %></td>
+    <td><%= registration.draw_team_cup %></td>
+    <td><%= registration.partner_team_cup %></td>
+    <td><%= registration.comment %></td>
     <td><%= registration.tournament_id %></td>
     <td><%= link_to 'Show', registration %></td>
     <td><%= link_to 'Edit', edit_registration_path(registration) %></td>
