@@ -10,14 +10,13 @@
 <hr>
 <div class="row-fluid marketing">
     <div class="span5">
+      <h4>Spielzeiten Clubmeisterschaften</h4>
+   <p>Die Spielzeiten für die Clubmeisterschaften des TC Sunlight können heruntergeladen werden.
+      <br><%= link_to "Zu den Spielzeiten.", :action => 'clubmeisterschaften2015_spielzeiten'%>
+    </p>
        <h4>Clubmeisterschaften vom 24. - 30. August 2015</h4>
    <p>Die Clubmeisterschaften des TC Sunlight finden vom Montag 24. bis Sonntag 30. August 2015 statt. Es sind 4 Konkurrenzen ausgeschrieben.
-      <br><%= link_to "Zur Turnierausschreibung.", :action => 'clubmeisterschaften2015'%><br>
-      <%= link_to 'Zur Anmeldung.', :controller => 'registrations', :action => 'new', :tournament_id => '3' %>
-    </p>
-      <h4>Oltner Tennismeisterschaften im Gheid</h4>
-   <p>Die Oltner-Meisterschaften werden vom 3. - 12. Juli 2015 auf den Plätzen im Gheid durchgeführt. Wenn alle Plätze im Gheid durch diese Veranstaltung besetzt sind, sind für die Mitglieder des TC Sunlight im Schöngrund permanent zwei Plätze reserviert. 
-      <a href="http://www.tcolten.ch/oltner/oltner.html" target="_new">Zu den Turnier-Details.</a>
+      <br><%= link_to "Zur Turnierausschreibung.", :action => 'clubmeisterschaften2015'%>
     </p>
  </div>
 
@@ -50,10 +49,22 @@
     <td></td>
   </tr>-->
   <tr>
-    <td>3. - 12. Juli 2014. Wochentags ab 15.30 und an den Wochenenden.</td>
-    <td>Oltner-Meisterschaften</td>
+    <td>24. - 28. August 2015 ab 18.00</td>
+    <td>Clubmeisterschaften TCS</td>
+    <td>1 - 3 Plätze</td>
+  </tr>
+  
+   <tr>
+    <td>29. August 2015 ab 9.00</td>
+    <td>Clubmeisterschaften TCS</td>
     <td>Alle Plätze</td>
   </tr>
+   <tr>
+    <td>30. August 2015 bis 15.00</td>
+    <td>Clubmeisterschaften TCS</td>
+    <td>Alle Plätze</td>
+  </tr>
+
  <!--<tr>
     <td>Jeden Donnerstag 19.00 - 20.30 und Freitag 18.30 - 22.30</td>
     <td>Interclubtraining gemäss <%= link_to 'Trainingsplan', :action => 'interclub'%></td>
