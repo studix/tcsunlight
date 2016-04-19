@@ -13,5 +13,5 @@
 //= require jquery
 //= require fancybox
 //= require jquery_ujs
-//= require bootstrap
+//= require bootstrap.min
 //= require_tree .
