@@ -17,6 +17,7 @@
         <%= render 'layouts/navigation' %>
     </div>
   </nav>
+
   <!-- Header Carousel -->
     <header id="myCarousel" class="carousel slide">
         <!-- Indicators -->
@@ -29,21 +30,21 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
+                <div class="fill" style="background-image:url('../images/front_orig.jpg');"></div>
                 <div class="carousel-caption">
-                    <h2>Caption 1</h2>
+                    <h2>Willkommen beim TC Sunlight Olten</h2>
                 </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
+                <div class="fill" style="background-image:url('../images/tennisplatz_breit.png');"></div>
                 <div class="carousel-caption">
-                    <h2>Caption 2</h2>
+                    <h2>Tennis spielen in Olten</h2>
                 </div>
             </div>
             <div class="item">
                 <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
                 <div class="carousel-caption">
-                    <h2>Caption 3</h2>
+                    <h2>Auf der schönsten Anlage der Region</h2>
                 </div>
             </div>
         </div>
@@ -56,6 +57,7 @@
             <span class="icon-next"></span>
         </a>
     </header>
+  
   <div class="container">
     <%= render 'layouts/messages' %>
     <%= yield %>
@@ -83,11 +85,5 @@
   </div>
 </div>
 </div>-->
- <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
 </body>
 </html>
