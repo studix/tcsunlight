@@ -1,30 +1,30 @@
 
 <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <%= link_to "TC Sunlight Olten", root_path, :class => 'navbar-brand' %>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><%= link_to 'Interclub', :controller => 'pages', :action => 'interclub' %></li>
-  <li><%= link_to 'Clubleben', :controller => 'pages', :controller => 'gallery', :action => 'index' %></li>
-  <li><%= link_to 'Tennisanlage', :controller => 'pages', :action => 'gheid' %></li>
-  <li><%= link_to 'Lageplan', :controller => 'pages', :action => 'lageplan' %></li>
-  <li><%= link_to 'Downloads', :controller => 'pages', :action => 'downloads' %></li>
-  <li><%= link_to "Kontakt", :controller => 'pages', :action => 'kontakt'%></li>
- <% if current_user %>
- <li><%= link_to('Logout', logout_path) %></li>
-<% else %>
-<li><%= link_to('Login', login_path)  %></li>
-<% end %>
-                </ul>
-            </div>
+<div class="navbar-header">
+  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <%= link_to "TC Sunlight Olten", root_path, :class => 'navbar-brand' %>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  <ul class="nav navbar-nav navbar-right">
+    <li class="<%= 'active' if current_page?(action: 'interclub') %>"><%= link_to 'Interclub', :controller => 'pages', :action => 'interclub' %></li>
+    <li class="<%= 'active' if current_page?(controller: 'gallery') %>"><%= link_to 'Clubleben', :controller => 'gallery'%></li>
+    <li class="<%= 'active' if current_page?(action: 'gheid') %>"><%= link_to 'Tennisanlage', :controller => 'pages', :action => 'gheid' %></li>
+    <li class="<%= 'active' if current_page?(action: 'lageplan') %>"><%= link_to 'Lageplan', :controller => 'pages', :action => 'lageplan' %></li>
+    <li class="<%= 'active' if current_page?(action: 'downloads') %>"><%= link_to 'Downloads', :controller => 'pages', :action => 'downloads' %></li>
+    <li class="<%= 'active' if current_page?(action: 'kontakt') %>"><%= link_to "Kontakt", :controller => 'pages', :action => 'kontakt'%></li>
+    <% if current_user %>
+    <li><%= link_to('Logout', logout_path) %></li>
+    <% else %>
+    <li><%= link_to('Login', login_path)  %></li>
+    <% end %>
+  </ul>
+</div>
 
 
 

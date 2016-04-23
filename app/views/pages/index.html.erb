@@ -1,87 +1,67 @@
 
-<!-- Header Carousel -->
-    <header id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 1</h2>
-                </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 2</h2>
-                </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
-                <div class="carousel-caption">
-                    <h2>Caption 3</h2>
-                </div>
-            </div>
-        </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
-    </header>
 <div class="row">
 
   <div class="col-sm-4 col-lg-4 col-md-4">
-    <h4>Tag der offenen Tür am 1. Mai 2016</h4>
-    <p>Der TC Sunlight lädt jung und alt ein zum Tag der offenen Tür. Eine vorgängige Anmeldung ist nicht nötig. Treffpunkt ist der 1. Mai 2016 ab 13.00 Uhr auf der Anlage Gheid.</p>
+    <h4>360° Panoramatour</h4>
+    <p>Der TC Sunlight verfügt über eine der schönsten Tennisanlagen der Region. <%= link_to 'Erkunde die Anlage', :action => 'gheid'%>.
+    </p>
   </div>
   <div class="col-sm-4 col-lg-4 col-md-4">
-    <h4>Platzeröffnungs- und Neumitglieder-Apéro</h4>
-    <p>Zusammen mit dem Tag der offenen Tür findet am Sonntag 1. Mai für alle Mitglieder das Platzeröffnungs- und Neumitglieder-Apéro statt. Der Anlass beginnt um 11 Uhr. Das Apéro findet bei jeder Witterung statt. Bei schönem Wetter freies Tennisspiel „Jeder mit Jedem“!</p>
+    <h4>Lust auf Tennis?</h4>
+    <p><%= link_to 'Werde Mitglied.', :action => 'mitglied'%></p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">
+      News
+    </h1>
   </div>
   <div class="col-sm-4 col-lg-4 col-md-4">
-    <h4>GV vom 18. März 2016</h4>
-    <p>Martin Hammele informierte an der GV vom 18. März 2016 über den Stand des Fusionsprojekts "Gheid". Die städtischen Betriebe Olten wollen den Baurechtsvertrag, auf dem die fünf Tennisplätze im Gheid stehen, nicht mehr verlängern. Die Fusion mit dem TC Olten ist damit in der geplanten Form gescheitert.
+    <h4>Die Platze im Gheid sind eröffnet</h4>
+    <p>Die Outdoor-Saison 2016 kann beginnen!</p>
+  </div>
+  <div class="col-sm-4 col-lg-4 col-md-4">
+   <h4>Jahresprogramm und Clubinfos 2016</h4>
+   <p>Das Jahresprogramm und die Clubinfos 2016 können im <%= link_to "Download-Bereich heruntergeladen", :action => 'downloads'%> werden.
+   </p>
+ </div>
+ <div class="col-sm-4 col-lg-4 col-md-4">
+  <h4>Tag der offenen Tür am 1. Mai 2016</h4>
+  <p>Der TC Sunlight lädt jung und alt ein zum Tag der offenen Tür. Eine vorgängige Anmeldung ist nicht nötig. Treffpunkt ist der 1. Mai 2016 ab 13.00 Uhr auf der Anlage Gheid.</p>
+</div>
+<div class="col-sm-4 col-lg-4 col-md-4">
+  <h4>Platzeröffnungs- und Neumitglieder-Apéro</h4>
+  <p>Zusammen mit dem Tag der offenen Tür findet am Sonntag 1. Mai für alle Mitglieder das Platzeröffnungs- und Neumitglieder-Apéro statt. Der Anlass beginnt um 11 Uhr. Das Apéro findet bei jeder Witterung statt. Bei schönem Wetter freies Tennisspiel „Jeder mit Jedem“!</p>
+</div>
+<div class="col-sm-4 col-lg-4 col-md-4">
+  <h4>GV vom 18. März 2016</h4>
+  <p>Martin Hammele informierte an der GV vom 18. März 2016 über den Stand des Fusionsprojekts "Gheid". Die städtischen Betriebe Olten wollen den Baurechtsvertrag, auf dem die fünf Tennisplätze im Gheid stehen, nicht mehr verlängern. Die Fusion mit dem TC Olten ist damit in der geplanten Form gescheitert.
        <br><%= link_to "Zum Kurzbericht der GV.", :action => 'gv2016'%><!--<br>
        <a href="../Download/Protokoll_GV_2016.pdf" target="_new">Zum Protokoll der GV.</a>-->
      </div>
-     <div class="col-sm-4 col-lg-4 col-md-4">
-      <h4>360° Panoramatour</h4>
-      <p>Der TC Sunlight verfügt über eine der schönsten Tennisanlagen der Region. <%= link_to 'Erkunde die Anlage', :action => 'gheid'%>.
-      </p>
-    </div>
-    <div class="col-sm-4 col-lg-4 col-md-4">
-      <h4>Lust auf Tennis?</h4>
-      <p><%= link_to 'Werde Mitglied.', :action => 'mitglied'%></p>
-    </div>
+     
   </div>
-  <!-- /.row -->
-  
-  <div class="row">
-   <div class="col-lg-12">
-    <h1 class="page-header">
-      Platzreservationen
-    </h1>
-  </div>
-  <div class="col-md-11">
-    <table class="table table-striped">
-     <thead>
-       <tr>
-         <th>Datum/Zeit</th>
-         <th>Grund</th>
-         <th>Plätze</th>
-       </tr>
-     </thead>
-     <tbody>
+   <!-- /.row -->
+
+
+
+   <div class="row">
+     <div class="col-lg-12">
+      <h1 class="page-header">
+        Platzreservationen
+      </h1>
+    </div>
+    <div class="col-md-11">
+      <table class="table table-striped table-hover">
+       <thead>
+         <tr>
+           <th>Datum/Zeit</th>
+           <th>Grund</th>
+           <th>Plätze</th>
+         </tr>
+       </thead>
+       <tbody>
       <!-- <tr>
         <td>Im Moment sind keine Platzreservationen bekannt.</td>
         <td></td>
@@ -115,8 +95,8 @@
 </div>
 <!-- /.row -->
 <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
+<script>
+$('.carousel').carousel({
         interval: 5000 //changes the speed
-    })
-    </script>
+      })
+</script>
