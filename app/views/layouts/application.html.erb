@@ -18,7 +18,8 @@
     </div>
   </nav>
 
-  <!-- Header Carousel -->
+  <!-- As soon as the carousel container div is not at top level in the DOM the item divs with class fill do not work anymore. Need to do render the carousel with a condition here. -->
+   <% if current_page?('/') %>
     <header id="myCarousel" class="carousel slide">
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -57,6 +58,7 @@
             <span class="icon-next"></span>
         </a>
     </header>
+    <% end %>
   
   <div class="container">
     <%= render 'layouts/messages' %>
@@ -85,5 +87,11 @@
   </div>
 </div>
 </div>-->
+<!-- Script to Activate the Carousel -->
+    <script>
+    $('#myCarousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
 </body>
 </html>
