@@ -23,6 +23,10 @@ body {
     opacity: 0.8;
 }
 
+.non-indented {
+    padding-left:0px
+}
+
 /* Home Page Carousel */
 
 header.carousel {
@@ -47,7 +51,6 @@ header.carousel .fill {
 .error-404 {
     font-size: 100px;
 }
-
 
 /* Sticky footer styles 
 -------------------------------------------------- */
