@@ -12,61 +12,67 @@
   <%= yield(:head) %>
 </head>
 <body>
-   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
+
+  <!-- Wrapper div for sticky footer. Do not render for homage as it would break carousel (see comment below). -->
+  <% if !current_page?('/') %>
+  <div id="wrap">
+    <%end%>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
         <%= render 'layouts/navigation' %>
-    </div>
-  </nav>
+      </div>
+    </nav>
 
-  <!-- As soon as the carousel container div is not at top level in the DOM the item divs with class fill do not work anymore. Need to do render the carousel with a condition here. -->
-   <% if current_page?('/') %>
+    <!-- As soon as the carousel container div is not at top level in the DOM the item divs with class fill do not work anymore. Need to do render the carousel with a condition here. -->
+    <% if current_page?('/') %>
     <header id="myCarousel" class="carousel slide">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <div class="fill" style="background-image:url('../images/front_orig.jpg');"></div>
-                <div class="carousel-caption">
-                    <h2>Willkommen beim TC Sunlight Olten</h2>
-                </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('../images/tennisplatz_breit.png');"></div>
-                <div class="carousel-caption">
-                    <h2>Tennis spielen in Olten</h2>
-                </div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
-                <div class="carousel-caption">
-                    <h2>Auf der schönsten Anlage der Region</h2>
-                </div>
-            </div>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <div class="fill" style="background-image:url('../images/front_1.jpg');"></div>
+          <div class="carousel-caption">
+            <h2>Willkommen beim TC Sunlight Olten</h2>
+          </div>
         </div>
+        <div class="item">
+          <div class="fill" style="background-image:url('../images/front_2.jpg');"></div>
+          <div class="carousel-caption">
+            <h2>Tennis spielen in Olten</h2>
+          </div>
+        </div>
+        <div class="item">
+          <div class="fill" style="background-image:url('../images/front_3.jpg');"></div>
+          <div class="carousel-caption">
+            <h2>Auf der schönsten Anlage der Region</h2>
+          </div>
+        </div>
+      </div>
 
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="icon-next"></span>
-        </a>
+      <!-- Controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+      </a>
     </header>
     <% end %>
+    
+    <div class="container">
+      <%= render 'layouts/messages' %>
+      <%= yield %>
+    </div>
+    <div id="push"></div>
+  </div>
   
-  <div class="container">
-    <%= render 'layouts/messages' %>
-    <%= yield %>
-  </div>
-   <div id="push"></div>
-  </div>
- 
   <div id="footer">
     <div class="text-muted credit">
       <div class="container">
@@ -88,11 +94,16 @@
   </div>
 </div>
 </div>
+
+<% if !current_page?('/') %>
+</div>
+<%end%>
+
 <!-- Script to Activate the Carousel -->
-    <script>
-    $('#myCarousel').carousel({
+<script>
+$('#myCarousel').carousel({
         interval: 5000 //changes the speed
-    })
-    </script>
+      })
+</script>
 </body>
 </html>
