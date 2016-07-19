@@ -4,6 +4,9 @@ Vielen Dank für deine Anmeldung zu den Clubmeisterschaften. Du hast dich für f
 <%  for draw in @registration.registered_draws %>
 - <%=draw%>
 <%  end %>
+<% if @registration.participate_event? %>
+- Grillplausch am Freitagabend
+<%end%>
 
 Du erhältst kein Aufgebot. Spielpläne und Spielzeiten sind ab <%=@registration.tournament.spielplan_verfuegbar_datum.strftime('%d.%m.%Y')%> im Clubhhaus aufgehängt und im Internet abrufbar.
 

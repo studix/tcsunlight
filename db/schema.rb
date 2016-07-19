@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150708185033) do
+ActiveRecord::Schema.define(:version => 20160719155826) do
 
   create_table "event_registrations", :force => true do |t|
     t.string   "Email"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20150708185033) do
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
     t.boolean  "draw_men_seniors"
+    t.boolean  "participate_event"
   end
 
   create_table "tournaments", :force => true do |t|

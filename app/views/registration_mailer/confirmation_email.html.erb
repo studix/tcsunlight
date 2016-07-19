@@ -12,6 +12,9 @@
 		<%  for draw in @registration.registered_draws %>
 		<li><%=draw%></li>
 		<%  end %>
+		<% if @registration.participate_event? %>
+		<li>Grillplausch am Freitagabend</li>
+		<%end%>
 	</ul>
 	<p>
 		Du erhältst kein Aufgebot. Spielpläne und Spielzeiten sind ab <%=@registration.tournament.spielplan_verfuegbar_datum.strftime('%d.%m.%Y')%> im Clubhhaus aufgehängt und im Internet abrufbar.

@@ -41,6 +41,9 @@
     <%  for draw in @registration.registered_draws %>
     <li><%=draw%></li>
     <%  end %>
+    <% if @registration.participate_event? %>
+    <li>Grillplausch am Freitabend</li>
+    <% end%>
   </ul>
 
 <%= link_to 'Home', :controller => 'pages', :action => 'index' %>

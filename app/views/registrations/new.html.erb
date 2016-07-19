@@ -1,108 +1,106 @@
 <div class="row">
-		<h2>Anmeldung für die <%= @registration.tournament.title %></h2>
+	<h2>Anmeldung für die <%= @registration.tournament.title %></h2>
 
-		<%= form_for @registration, :html => {:class => "form-horizontal"} do %>
-			<% if @registration.errors.any? %>
-				<% @registration.errors.full_messages.each do |msg| %>
-						    <div class="alert alert-error fade in">
-			      <a class="close" data-dismiss="alert" href="#">&times;</a>
-			      <%= msg %>
-			    </div>
-				<% end %>
-			<% end %>
-		<div class="control-group">
-			<%= hidden_field_tag 'tournament_id', @registration.tournament_id %> 
-			<label for="registration_last_name" class="control-label">Name</label>
-			<div class="controls">
-				<%= text_field(:registration, :Name) %>
-			</div>
+	<%= form_for @registration, :html => {:class => "form-horizontal"} do %>
+	<% if @registration.errors.any? %>
+	<% @registration.errors.full_messages.each do |msg| %>
+	<div class="alert alert-error fade in">
+		<a class="close" data-dismiss="alert" href="#">&times;</a>
+		<%= msg %>
+	</div>
+	<% end %>
+	<% end %>
+	<div class="form-group row">
+		<%= hidden_field_tag 'tournament_id', @registration.tournament_id %> 
+		<label for="registration_last_name" class="col-sm-2 form-control-label">Name</label>
+		<div class="col-sm-10">
+			<%= text_field(:registration, :Name) %>
 		</div>
+	</div>
+	<div class="form-group row">
+		<label for="registration_first_name" class="col-sm-2 form-control-label">Vorname</label>
+		<div class="col-sm-10">
+			<%= text_field(:registration, :Vorname) %>
+		</div>
+	</div>
 
-		<div class="control-group">
-			<label for="registration_first_name" class="control-label">Vorname</label>
-			<div class="controls">
-				<%= text_field(:registration, :Vorname) %>
-			</div>
+	<div class="form-group row">
+		<label for="registration_email" class="col-sm-2 form-control-label">E-Mail</label>
+		<div class="col-sm-10">
+			<%= text_field(:registration, :Email) %>
 		</div>
+	</div>
 
-		<div class="control-group">
-			<label for="registration_email" class="control-label">E-Mail</label>
-			<div class="controls">
-				<%= text_field(:registration, :Email) %>
-			</div>
+	<div class="form-group row">
+		<label for="registration_telefon" class="col-sm-2 form-control-label">Telefon</label>
+		<div class="col-sm-10">
+			<%= text_field(:registration, :TelefonNummer) %>
 		</div>
+	</div>
 
-		<div class="control-group">
-			<label for="registration_telefon" class="control-label">Telefon</label>
-			<div class="controls">
-				<%= text_field(:registration, :TelefonNummer) %>
-			</div>
+	<div class="form-group row">
+		<label for="registration_classing" class="col-sm-2 form-control-label">Klassierung</label>
+		<div class="col-sm-10">
+			<%= text_field(:registration, :Klassierung) %>
 		</div>
+	</div>
 
-		<div class="control-group">
-			<label for="registration_classing" class="control-label">Klassierung</label>
-			<div class="controls">
-				<%= text_field(:registration, :Klassierung) %>
-			</div>
+	<div class="form-group row">
+		<label for="registration_classing_value" class="col-sm-2 form-control-label">Klassierungswert</label>
+		<div class="col-sm-10">
+			<%= text_field(:registration, :Klassierungswert) %>
 		</div>
+	</div>
+	<div class="form-group row">
+		<label for="registration_men_singles" class="col-sm-2 form-control-label">Herren Einzel</label>
+		<div class="col-sm-10">
+			<%= check_box 'registration', 'draw_men_singles'  %>
+		</div>
+	</div>
 
-		<div class="control-group">
-			<label for="registration_classing_value" class="control-label">Klassierungswert</label>
-			<div class="controls">
-				<%= text_field(:registration, :Klassierungswert) %>
-			</div>
-		</div>
 
-		<div class="control-group">
-			<label for="registration_men_singles" class="control-label">Herren Einzel</label>
-			<div class="controls">
-				<%= check_box 'registration', 'draw_men_singles'  %>
-			</div>
+	<div class="form-group row">
+		<label for="registration_men_seniors" class="col-sm-2 form-control-label">Herren Einzel 45+</label>
+		<div class="col-sm-10">
+			<%= check_box 'registration', 'draw_men_seniors'  %>
 		</div>
+	</div>
 
-		<div class="control-group">
-			<label for="registration_men_seniors" class="control-label">Einzel Senioren</label>
-			<div class="controls">
-				<%= check_box 'registration', 'draw_men_seniors'  %>
+	<div class="form-group row">
+		<label for="registration_men_doubles" class="col-sm-2 form-control-label">Herren Doppel</label>
+		<div class="col-sm-10">
+			<%= check_box 'registration', 'draw_men_doubles'  %>
+		<%= text_field 'registration', 'partner_men_doubles', placeholder: 'Partner'%>
 			</div>
+	</div>
+	
+	
+	<div class="form-group row">
+		<label for="registration_team_cup" class="col-sm-2 form-control-label">Team-Cup</label>
+		<div class="col-sm-10">
+			<%= check_box 'registration', 'draw_team_cup'  %>
+		<%= text_field 'registration', 'partner_team_cup', placeholder: 'Partner/Partnerin'%>
 		</div>
+		
 
-		<div class="control-group">
-			<label for="registration_men_doubles" class="control-label">Herren Doppel</label>
-			<div class="controls">
-				<%= check_box 'registration', 'draw_men_doubles'  %>
-			</div>
-		</div>
-         <div class="control-group">
-			<label for="registration_partner" class="control-label">Partner Herren Doppel</label>
-			<div class="controls">
-			<%= text_field 'registration', 'partner_men_doubles' %>
-			</div>
-		</div>
+	</div>
+	<div class="checkbox">
+		<label>
+			<%= check_box 'registration', 'participate_event'  %>
+			Ich komme zum Grillplausch am Freitabend.
+		</label>
+	</div>
 
-		<div class="control-group">
-			<label for="registration_team_cup" class="control-label">Team-Cup</label>
-			<div class="controls">
-				<%= check_box 'registration', 'draw_team_cup'  %>
-			</div>
+	<div class="control-group">
+		<label for="registration_bemerkung" class="control-label">Bemerkung</label>
+		<div class="controls">
+			<%= text_area(:registration, :comment, :size=>"100") %>
 		</div>
-         <div class="control-group">
-			<label for="registration_partner_team_cup" class="control-label">Partner/Partnerin</label>
-			<div class="controls">
-			<%= text_field 'registration', 'partner_team_cup' %>
-			</div>
-		</div>
+	</div>
+	<div class="form-actions">
+		<%= submit_tag "Anmelden", :class => "btn btn-lg btn-primary"  %>
+	</div>
+	<% end %>
 
-<div class="control-group">
-			<label for="registration_bemerkung" class="control-label">Bemerkung</label>
-			<div class="controls">
-				<%= text_area(:registration, :comment, :size=>"100") %>
-			</div>
-		</div>
-		<div class="form-actions">
-			<%= submit_tag "Anmelden", :class => "btn btn-lg btn-primary"  %>
-		</div>
-		<% end %>
-
-		<%= link_to 'Zurück', :controller => 'pages', :action => 'index' %>
+	<%= link_to 'Zurück', :controller => 'pages', :action => 'index' %>
 </div>
