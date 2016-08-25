@@ -20,33 +20,32 @@
 </div>
 <div class="row">
   <div class="col-sm-4 col-lg-4 col-md-4">
-    <%= link_to image_tag("/assets/clubmeisterschaften2016.jpg")%>
-  </div>
-  <div class="col-sm-4 col-lg-4 col-md-4">
     <h4>Rado Trophy - Clubmeisterschaften 2016</h4> 
+    <%= link_to image_tag("/assets/clubmeisterschaften2016.jpg", :class => 'img-responsive')%>
     Patrick Peyer-Feuz konnte im Herren-Einzel seinen Titel vom Vorjahr erfolgreich verteidigen. Er gewann gegen Gabriel Burki klar in 2 Sätzen. Im Trosttableaux gewann Jean-Louis Schafer. Im Finalspiel des Herren-Doppels konnte sich Gabriel Burki und Marco Studer gegen das Duo Schafer/Wyss durchsetzen.
     <br>
     <p><%= link_to 'Zu den Bildern des Finaltages', :controller => 'gallery', :action => 'index' %></p>
-   <!--<a href="../Download/Resultate_Tableau_Herren_Einzel_2015.pdf" target="_new">Zu den Resultaten des Herren-Einzels</a><br>
-    <a href="../Download/Resultate_Tableau_Herren_Doppel_2015.pdf" target="_new">Zu den Resultaten des Herren-Doppels</a>-->
+    
   </div>
-   <div class="col-sm-4 col-lg-4 col-md-4">
+   
+<div class="col-sm-4 col-lg-4 col-md-4">
+    <h4>Resultate Clubmeisterschaften 2016</h4> 
+    <a href="../Download/Resultate_Tableau_Herren_Einzel_2016.pdf" target="_new">Resultate Herren-Einzel</a><br>
+    <a href="../Download/Resultate_Tableau_Herren_Einzel_Trost_2016.pdf" target="_new">Resultate Trost-Tableax</a><br>
+    <a href="../Download/Resultate_Tableau_Herren_Doppel_2016.pdf" target="_new">Resultate Herren-Doppel</a>
+  </div>
+
+ <div class="col-sm-4 col-lg-4 col-md-4">
    <h4>Jahresprogramm und Clubinfos 2016</h4>
    <p>Das Jahresprogramm und die Clubinfos 2016 können im <%= link_to "Download-Bereich heruntergeladen", :action => 'downloads'%> werden.
    </p>
  </div>
-</div>
-
-<div class="row">
- 
  <div class="col-sm-4 col-lg-4 col-md-4">
   <h4>GV vom 18. März 2016</h4>
   <p>Martin Hammele informierte an der GV vom 18. März 2016 über den Stand des Fusionsprojekts "Gheid". Die städtischen Betriebe Olten wollen den Baurechtsvertrag, auf dem die fünf Tennisplätze im Gheid stehen, nicht mehr verlängern. Die Fusion mit dem TC Olten ist damit in der geplanten Form gescheitert.
        <br><%= link_to "Zum Kurzbericht der GV.", :action => 'gv2016'%><!--<br>
        <a href="../Download/Protokoll_GV_2016.pdf" target="_new">Zum Protokoll der GV.</a>--> 
    </div>
- </div>
- <!-- /.row -->
  <div class="row">
    <div class="col-lg-12">
     <h1 id="reservations" class="page-header">
