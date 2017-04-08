@@ -20,24 +20,27 @@
 </div>
 <div class="row">
   <div class="col-sm-4 col-lg-4 col-md-4">
-    <h4>GV vom 17. März 2017</h4> 
-    Die diesjährige Generalversammlung findet am Freitag, 17. März 2017 um 19:00 Uhr im Restaurant "Rathskeller" (Chübu) in Olten statt. Das Nachtessen nehmen wir nach der GV im Restaurant „Kreuz“ ein. Anmeldungen nimmt der Präsident Martin Hammele bis 14.3.2017 <%= mail_to "martin.hammele@bluewin.ch", "per E-Mail", :encode => "hex"%> entgegen. 
-    <p><a href="../Download/Einladung_GV_2017.pdf" target="_new">Offizielle Einladung mit Anmeldung und Taktandenliste</a></p>
-    
+    <h4>Platzeröffnung</h4> 
+    Die Plätze sind voraussichtlich ab Donnerstag 13.4.2017 spielbereit. Die Clubleitung wünscht allen eine schöne Tennissaison 2017.
+    <!--Die Plätze sind erföffnet. Die Outdoor-Saison 2017 kann beginnen! Die Clubleitung wünscht allen viel Spass beim Tennis.-->
   </div>
-   
-<div class="col-sm-4 col-lg-4 col-md-4">
-    <h4>Resultate Clubmeisterschaften 2016</h4> 
-    <a href="../Download/Resultate_Tableau_Herren_Einzel_2016.pdf" target="_new">Resultate Herren-Einzel</a><br>
-    <a href="../Download/Resultate_Tableau_Herren_Einzel_Trost_2016.pdf" target="_new">Resultate Trost-Tableax</a><br>
-    <a href="../Download/Resultate_Tableau_Herren_Doppel_2016.pdf" target="_new">Resultate Herren-Doppel</a>
+  <div class="col-sm-4 col-lg-4 col-md-4">
+    <h4>Tennisunterricht</h4> 
+    Unser Tennislehrer Patrick Peyer bietet am Montagabend auf unserer Anlage Tennisunterricht an. Patrick ist J <%=h "&" %> S Leiter, Interclubspieler und amtierender Clubmeister.
+    <p><a href="../Download/Tennisunterricht_Patrick.pdf" target="_new">Zum Angebot.</a></p>
   </div>
-
+   <div class="col-sm-4 col-lg-4 col-md-4">
+    <h4>Interclubsaison 2017</h4> 
+    An den Wochenenden im April, Mai und Juni sind die Plätze z.T. von den Interclubspielen besetzt. Wann die Plätze für den Interclub reserviert sind findest du unter <a href="#reservations">Platzreservationen</a>. Mehr zu unseren Interclubmannschaften findest du im <%= link_to "Interclubbereich", :action => 'interclub'%>.
+  </div>
+</div>
+<div class="row">
  <div class="col-sm-4 col-lg-4 col-md-4">
    <h4>Jahresprogramm und Clubinfos 2017</h4>
-   <p>Das Jahresprogramm und die Clubinfos 2017 sind in Arbeit und können Anfangs Saison im <%= link_to "Download-Bereich heruntergeladen", :action => 'downloads'%> werden.
+   <p>Das Jahresprogramm und die Clubinfos 2017 sind in Arbeit und können bald im <%= link_to "Download-Bereich heruntergeladen", :action => 'downloads'%> werden.
    </p>
  </div>
+</div>
  <div class="row">
    <div class="col-lg-12">
     <h1 id="reservations" class="page-header">
@@ -45,12 +48,11 @@
     </h1>
   </div>
 </div>
-<div class="row">
+<!--<div class="row">
   <div class="col-md-11">
   Es sind zur Zeit keine Platzreservationen bekannt.
-</div>
-</div>
-<!--<div class="row">
+</div>-->
+<div class="row">
   <div class="col-md-11">
     <table class="table table-striped table-hover">
      <thead>
@@ -62,19 +64,31 @@
      </thead>
      <tbody>
        <tr>
-        <td>15. - 19. August 2016 ab 18:30</td>
-        <td>Clubmeisterschaften</td>
-        <td>1-2</td>
-      </tr>
-      <tr>
-        <td>20./21. August 2016 ganzer Tag</td>
-        <td>Clubmeisterschaften</td>
+       <td>30. April 2017 9.00 Uhr - ca. 13.00 Uhr.</td>
+        <td>Interclub Herren 45+ 2. Liga</td>
         <td>1-3</td>
       </tr>
-
-
-    
+       <tr>
+       <td>6. Mai 2017 ab 9.00 Uhr</td>
+        <td>Interclub Herren 55+ 2. Liga</td>
+        <td>1-3</td>
+      </tr>
+       <tr>
+       <td>7. Mai 2017 ab 10.00 Uhr - ca. 16.00 Uhr</td>
+        <td>Interclub Herren 35+ 2. Liga</td>
+        <td>1-3</td>
+      </tr>
+      <tr>
+       <td>13. Mai 2017 ab 9.00 Uhr</td>
+        <td>Interclub Herren 35+ 2. Liga / Herren 55+ 2. Liga</td>
+        <td>1-3</td>
+      </tr>
+      <!--<tr>
+        <td>Jeden Mittwoch-, Donnerstag- und Freitagabend während der Interclubsaison</td>
+        <td>Interclubtraining gemäss <%= link_to 'Trainingsplan', :action => 'interclub'%></td>
+        <td>Platz 1 + 2</td>
+      </tr>-->
     </tbody>
-  </table>-->
+  </table>
 <!-- /.row -->
 
