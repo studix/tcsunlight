@@ -13,9 +13,12 @@
 .team-list img {
 	margin:5px;
 }
-.ic-results p {
-	line-height: 1.0;
-	font-size: 14px;
+.ic-results a {
+    display:block;
+}
+
+.expandable-link {
+  margin-top: 5px;
 }
 
 .centered-image {

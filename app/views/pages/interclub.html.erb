@@ -1,3 +1,6 @@
+<%= javascript_tag "$('.list > li a').click(function() {
+  $(this).parent().find('ul').toggle();
+})"%>
 <div class="row">
   <div class="col-xs-12">
   <h1>Interclub</h1>
@@ -61,24 +64,20 @@
   <p>Die aktuellen Resultate der laufenden Interclubsaison findest du <a href="http://www.swisstennis.ch/?rub=20&id=120047" target="_blank">im Interclubbereich von Swiss Tennis</a>.</p>
 
   <p style="clear:left">Resultate der letzten Jahre:</p>
-  <div class="ic-results">
-    <p><%= link_to 'Interclub 2016', :action => 'interclub2016'%></p>
-    <p><%= link_to 'Interclub 2015', :action => 'interclub2015'%></p>
-    <p><%= link_to 'Interclub 2013', :action => 'interclub2013'%></p>
-    <p><%= link_to 'Interclub 2012', :action => 'interclub2012'%></p>
-    <p><%= link_to 'Interclub 2011', :action => 'interclub2011'%></p>
-    <p><%= link_to 'Interclub 2010', :action => 'interclub2010'%></p>
-    <p><%= link_to 'Interclub 2009', :action => 'interclub2009'%></p>
-    <p><%= link_to 'Interclub 2008', :action => 'interclub2008'%></p>
-    <p><%= link_to 'Interclub 2007', :action => 'interclub2007'%></p>
-    <p><%= link_to 'Interclub 2006', :action => 'interclub2006'%></p>
-    <p><%= link_to 'Interclub 2005', :action => 'interclub2005'%></p>
-    <p><%= link_to 'Interclub 2004', :action => 'interclub2004'%></p>
-    <p><%= link_to 'Interclub 2003', :action => 'interclub2003'%></p>
-    <p><%= link_to 'Interclub 2002', :action => 'interclub2002'%></p>
-    <p><%= link_to 'Interclub 2001', :action => 'interclub2001'%></p>
-    <p><%= link_to 'Interclub 2000', :action => 'interclub2000'%></p>
-    <p><%= link_to 'Interclub 1999', :action => 'interclub1999'%></p>
+  <div class="ic-results expandable-items">
+    <% (1999..2017).reverse_each do |i| %>
+      <% if(i != 2014) %>
+        <% if(i >= 2015) %>
+          <%= link_to "Interclub #{i}", :action => "interclub#{i}" %>
+          <% else %>
+          <%= link_to "Interclub #{i}", {:action => "interclub#{i}"}, class: "hidden" %>
+        <%end%>
+      <%end%>
+    <%end%>
+    
+  </div>
+  <div class="expandable-link">
+      <a href="javascript:;">mehr anzeigen ...</a>
   </div>
 </div>
 </div>
