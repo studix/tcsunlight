@@ -11,17 +11,7 @@ class PicasaWebAlbumFacade
                                  "5785788968661934049" => "https://goo.gl/photos/X57vUjYaJCtBCbb67", #CM 2012
                                  "5646321407522660097" => "https://goo.gl/photos/PLsTja8Jj4XV3Wo6A", #CM 2011
                                  "5489546439564447921" => "https://goo.gl/photos/o84MoZ2QHzdSBcPo6", #Hopp Schwiiz 2010
-                                 "5375438016275558593" => "https://goo.gl/photos/qnsoLAybqHZMd6hC7", #CM 2009
-                                 "5239650248778752545" => "https://goo.gl/photos/UfQB4PyhHtMXAB2E7", #CM 2008
-                                 "5212048226829497361" => "https://goo.gl/photos/7r8BpyamJatn3oBE6", #Hopp Schwiiz 2008
-                                 "5192731291146577057" => "https://goo.gl/photos/4yGp5NKo4gT1e7tbA", #IC Ligaerhalt 2005
-                                 "5192730784340435937" => "https://goo.gl/photos/5ZtR7HCGYcwL63Vq5", #IC Ligaerhalt 2001
-                                 "5192748458130860321" => "https://goo.gl/photos/to5qijmyDKN5wrgN9", #CM 2006
-                                 "5192746589820086481" => "https://goo.gl/photos/sDuqoYWfyeb8dDiPA", #CM 2005,
-                                 "5192742230428280737" => "https://goo.gl/photos/J66ULJvPGG5Sz1w96", #CM 2004,
-                                 "5192749592002226609" => "https://goo.gl/photos/gAshAiivvXUusQs96", #IC 2004,
-                                 "5192737991295559345" => "https://goo.gl/photos/x4wxFfxGuFK78NN36", #CM 2003,
-                                 "5192733022018397633" => "https://goo.gl/photos/Hv3tvFhqdJN2ZmVu9"} #Nachtturnier 2002,
+                                }
   
   def self.get_album_feed
     uri = URI.parse(@@picasa_url)
