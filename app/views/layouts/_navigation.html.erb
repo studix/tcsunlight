@@ -12,9 +12,7 @@
 <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
   <ul class="nav navbar-nav navbar-right">
-    <li class="<%= 'active' if current_page?(action: 'interclub') %>"><%= link_to 'Interclub', :controller => 'pages', :action => 'interclub' %></li>
     <li class="<%= 'active' if current_page?(controller: 'gallery') %>"><%= link_to 'Clubleben', :controller => 'gallery'%></li>
-    <li class="<%= 'active' if current_page?(action: 'gheid') %>"><%= link_to 'Tennisanlage', :controller => 'pages', :action => 'gheid' %></li>
     <li class="<%= 'active' if current_page?(action: 'lageplan') %>"><%= link_to 'Lageplan', :controller => 'pages', :action => 'lageplan' %></li>
     <li class="<%= 'active' if current_page?(action: 'downloads') %>"><%= link_to 'Downloads', :controller => 'pages', :action => 'downloads' %></li>
     <li class="<%= 'active' if current_page?(action: 'kontakt') %>"><%= link_to "Kontakt", :controller => 'pages', :action => 'kontakt'%></li>
